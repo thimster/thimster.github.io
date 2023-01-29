@@ -39,60 +39,58 @@
 					Tim Higgs / ECLI Solutions Architect / MBIE
 				</h4>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<img src="images/ecli-header.png">
 				<h3>A journey through what ECLI is,<br>
-					what we have designed and built and why,<br>
-					 and some challenges we have overcome</h3>
+					what we have designed and built and<br>
+					some challenges we have overcome</h3>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>About Me</h2>
 				<ul>
 					<li>BSc Comp Sci, BA Philosophy Victoria University</li>
 					<li>25+ years in web application development</li>
-					<li>3 1/2 years as a Solutions Architect at MBIE on ECLI including DevOps CI/CD and K8s/OCP development</li>
+					<li>3 1/2 years as a Solutions Architect at MBIE on ECLI including DevOps CI/CD and Kubernetes-compatible
+						OpenShift development</li>
 					<li>Interests in the blending of technology with design, adventure travel (including skiing, diving and 
 						motorbiking) and music</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Introduction</h2>
 				<ul>
-					<li>Every year millions of emergency calls are made in New Zealand and being able to ascertain 
+					<li>Every year millions of emergency calls are made in New Zealand; being able to ascertain 
 						the location of an emergency is critical to enable emergency service to
 						best help those in need</li>
-					<li>These days most people have a mobile device on them capable of providing accurate location; currently
-						84% of 111 calls originate from a mobile (16% from landlines) which works out to around 1.3 million
-						genuine calls on mobile networks
-					</li>
-						<ul>
-							<li>Leverage that for ascertaining location</li>
+					<li>These days most people have a mobile device on them that can be used to calculate an accurate location;
+						currently 84% of 111 calls originate from a mobile (16% from landlines) which works out to around 1.3 million
+						genuine calls on mobile networks so it makes sense to look to leverage that for ascertaining location</li>
 						</ul>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
-				<h3>Emergency calls are often times of great stress.</h3>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h3>Emergency calls are often times of great stress. Additionally:</h3>
 				<ul>
-					<li>Additionally, people may not know where they are (there have been instances of hikers lost in remote
+					<li>People may not know where they are (there have been instances of hikers lost in remote
 						locations)</li>
 					<li>There are frequent instances of people being unable to speak during a call (such as instances of
 						domestic violence and injury)</li>
 					<li>There are times when people hang up before there’s been a chance to get their location from them
-						(such as depressive or suicidal calls).</li>
+						(such as depressive or suicidal calls)</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>What is ECLI?</h2>
 				<ul>
 					<li>Project developed within Ministry of Business, Innovation and Employment as part of the 
 						Government's Communications portfolio</li>
-					<li>Receives and processes mobile location information when an emergency (111) call made
+					<li>Receives and processes mobile location information when an emergency (111) call is made
 						from a mobile device over a cellular network details and makes the likely 
 						location of the caller available to authorised emergency service providers</li>
-					<li>This helps them respond to emergencies as quickly as possible.</li>
+					<li>This helps them respond to emergencies as quickly as possible</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Emergency Service Providers</h2>
 				<ul>
 					<li>New Zealand Police</li>
@@ -101,34 +99,35 @@
 				</ul>
 			</section>
 			<section data-background-image="images/cover-slide-background.png" style="color:black">
-				<h5>ECLI saves lives by<br>
-					decreasing the time taken to verify location and<br> reducing the average incident dispatch time</h5>
+				<h3><br>ECLI saves lives by<br>
+					decreasing the time taken to verify location and<br> reducing the average incident dispatch time</h3>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>ECLI Background</h2>
 				<ul>
 					<li>An inital build of the service originally deployed in 2017</li>
 					<li>In 2019 ECLI undertook a redesign + rebuild for greater flexibility, to leverage containerisation
 						and incorporate modern DevOps practices along with a suite of automated regression tests</li>
-					<li>This new system successfully went live in October 2021 and the new platform has realised the rebuild goals</li>
+					<li>This new system successfully went live in October 2021 and the new platform has already realised
+						many of the rebuild goals</li>
 				</ul>
 			</section>
 				<section data-background-image="images/energy-background.jpg">
 					<br><br><br>
-					<h2 style="color:white">High availability is<br>essential<br>as ECLI is a critical service</h2>
+					<h2 style="color:white">Service availability is<br>essential<br>as ECLI is a critical service</h2>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Containerisation?</h2>
 				<ul>
 					<li>Containerisation promotes component delineation and supports a scalable microservices architecture</li>
 					<li>Leverage CI/CD integration</li>
-					<li>Safer releases when deploy a service update independent of
+					<li>Safer releases when deploying microservice updates independent of
 					others</li>
-					<li>Running the same service & bundled runtime anywhere helps testing and deployment</li>
-					<li>Zero downtime with rolling deployments with multiple containers per microservice</li>
+					<li>Running the same service (with bundled runtime) anywhere helps testing and deployment</li>
+					<li>Zero-downtime with rolling deployments with multiple containers per microservice</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Kubernetes?</h2>
 				<ul>
 					<li>Also for its flexibility, portability and provision of PaaS for containers</li>
@@ -138,18 +137,18 @@
 						 of standing up new environments</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
-				<h2>Why DCSG Govt.Container?</h2>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>DCSG's Govt.Container</h2>
 				<ul>
-					<li>Managed Datacom OpenShift offering for Govt clients providing</li>
+					<li>Managed Datacom OpenShift offering for Govt clients incl. onshore support</li>
 					<li>Multiple data centres for high availability and DR with low latency between Auckland and Hamilton</li>
-					<li>Ease of integration with other existing ECLI components already in DCSG with onshore support</li>
+					<li>Ease of integration with other existing ECLI components already in DCSG</li>
 					<li>OpenShift provides K8s-compatibility and native support for Helm</li>
 					<li>Ease of integration with Microsoft Azure DevOps and deployment of ADO build agents within DCSG
 						infrastructure and network</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Constraints: what makes things harder?</h2>
 				<ul>
 					<li>Partial “air gap” due to security</li>
@@ -160,7 +159,7 @@
 					<li>Managed service means full admin not possible</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Architecture details</h2>
 				<ul>
 					<li>Backbone services, including integration into mobile network operators</li>
@@ -172,7 +171,7 @@
 					<li>Azure for DevOps and some cloud services</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Core ECLI Containerised Services</h2>
 				<ul>
 					<li>Containerised microservices with APIs built in .NET on Linux</li>
@@ -180,7 +179,7 @@
 					<li>Containerised NoSQL MongoDB database for short-lived, schema-less data with high-availability</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Azure DevOps</h2>
 				<ul>
 					<li>Pipelines for build, release and repeatable tasks (e.g. failover)</li>
@@ -189,26 +188,26 @@
 					<li>Wrap scripts running on VMs in pipelines</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<p>
 					<b>High-Level Architecture Overview of ECLI</b><br>
 					<img src="images/ECLI-Architecture-Overview.png">
 				</p>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>MongoDB</h2>
 				<ul>
-					<li>Replication for HA within a cluster/environment</li>
-					<li>Stretch cluster across data centres</li>
-					<li>Standby MongoDB replica to allow quorum in a data centre</li>
-					<li>Stretch cluster across data centres</li>
+					<li>ReplicaSets for H.A. within an environment: 1 primary + multiple secondaries</li>
+					<li>"Stretch cluster" across data centres for increased H.A.</li>
+					<li>Non-voting "standby" MongoDB replica to allow quorum in a data centre</li>
+					<li>Reconfigure replicaSet member priorities to change the primary</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>MongoDB Overview</h2>
 				<img src="images/mongodb.png">
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Helm</h2>
 				<ul>
 					<li>The package manager for Kubernetes</li>
@@ -217,7 +216,7 @@
 					<li>Deployment mechanism allows allows easy install and upgrade into a container platform</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Helm Continued</h2>
 				<ul>
 					<li>OO design - clean naming for clear delineation between microservices</li>
@@ -226,7 +225,7 @@
 						project, different projects, multiple times in the same project or different clusters</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Helm vs an Operator?</h2>
 				<ul>
 					<li>Reduced complexity</li>
@@ -238,15 +237,15 @@
 				</ul>
 			</section>
 
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Environments</h2>
 				<ul>
-					<li>Test and Stable on ARO</li>
-					<li>SIT and PROD on Govt.Container</li>
+					<li>Test and Stable on Azure ARO cluster</li>
+					<li>SIT and PROD on both clusters Govt.Container</li>
 				</ul>
 			</section>
 
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Namespaces, networking and RBAC</h2>
 				<ul>
 					<li>SIT and PROD</li>
@@ -256,7 +255,7 @@
 				</ul>
 			</section>
 
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Challenges</h2>
 				<p>Some challenges and issues we have faced</p>
 				<ul>
@@ -273,34 +272,31 @@
 				<h2 style="color:white">Reliability through Availability</h2>
 			</section>
 
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Multiple Clusters</h2>
 				<ul>
-					<li>Addtional dev/test cluster (Azure ARO) - greater control and allows testing of upgrades</li>
+					<li>Azure ARO dev/test cluster - greater control of this and allows upgrade testing</li>
 					<li>For resiliency and high availability we have 2 geographically separated prod OCP clusters</li>
-					<li>Sometimes backbone connections (including MNOs) into a data centre need to be taken down for upgrades etc. having the 2 clusters
-						allows quick failover to be done</li>
-					<li>F5 with global traffic management</li>
+					<li>LIVE/NONLIVE setup</li>
+					<li>Backbone connections (including MNOs) into data centres can be taken down for upgrades etc.</li>
+					<li>Ability for NONLIVE deployments and smoke testing prior to LIVE deployment</li>
+					<li>F5 with global traffic management - DNS strategy with short TTL</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Failover</h2>
 				<ul>
-					<li>DNS strategy with short TTL</li>
-					<li>Ability to trigger failover via ADO pipeline that takes a few seconds to run</li>
-					<li>Promotion of new MongoDB primary and demotion to standby</li>
-					<li>Quick failover between them with a LIVE/NONLIVE setup</li>
-					<li>Ability for NONLIVE deployments and smoke testing prior to LIVE deployment</li>
 					<li>Manual and automated failover</li>
 					<li>Automated detection of LIVE not being healthy and NONLIVE promoted</li>
-					<li>DNS change and MongoDB primary shifted to new LIVE data centre environment</li>
+					<li>Triggered failover via ADO pipeline - takes a few seconds to run</li>
+					<li>Traffic manager DNS change and MongoDB primary shifted to new LIVE data centre environment</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<b>Failover Overview</b>
 				<img src="images/Failover.png">
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Container Registry</h2>
 				<ul>
 					<li>Container registry solution within each cluster to facilitate quick image pulls and remove external Azure cloud 
@@ -312,27 +308,25 @@
 				</ul>
 			</section>
 
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Monitoring and alerting</h2>
 				<ul>
 					<li>Dynatrace - cloud-hosted service and OCP operator</li>
-					<li>Integration with ticket management for 24/7 support</li>
+					<li>Integration with ticket management for 24/7 support and MS Teams notifications</li>
 					<li>Alert profiles based upon certain observed errors etc</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
-				<h2>Realised benefits of the new platform</h2>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Realised benefits</h2>
 				<ul>
-					<li>Great uptime</li>
-					<li>Safe deployments that are easy and repeatable</li>
-					<li>Automated test suite</li>
+					<li>Great uptime and most releases are now zero-downtimes</li>
+					<li>Safe deployments that are easy and repeatable aided by automated test suite</li>
 					<li>Automated container image rebuilding for patching</li>
 					<li>Enhanced security through DevSecOps such as container image scanning</li>
-					<li>Scalable platform for adding new applications</li>
-					<li>Ongoing ECLI service certification (changes & new applications) is helped by certified PaaS</li>
+					<li>Scalable platform for adding new applications that helps ongoing ECLI service certification & accreditation</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Next: R&A Data Science application</h2>
 				<ul>
 					<li>We require a lot of analysis over our data to help provide insights, troubleshoot
@@ -343,7 +337,7 @@
 						work with the tools that they need and want</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Details</h2>
 				<ul>
 					<li>Containerised workloads such as Apache Airflow and Postgres</li>
@@ -351,7 +345,7 @@
 					<li>Integration with PowerBI for reporting</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Future</h2>
 				<p>
 					The service has become a critical component of the emergency response system, significantly 
@@ -362,13 +356,13 @@
 					5G, and Voice over Wi-Fi, ongoing enhancements to the Service will ensure it remains current. 
 				</p>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Questions?</h2>
 			</section>
-			<section data-background-image="images/ecli-header.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Further details/references:</h2>
 				- [ ]
-			</section>
+			</section> -->
 		</div>
 	</div>
 
