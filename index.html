@@ -246,18 +246,19 @@
 			</section>
 
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Namespaces, networking and RBAC</h2>
+				<h2>Projects, networking and RBAC</h2>
 				<ul>
 					<li>SIT and PROD</li>
-					<li>Delineation between roles such as developer and support along with service accounts for secure
+					<li>Delineation between roles such as <i>developer</i> vs <i>admin</i> vs <i>support</i> along with <i>service accounts</i> for secure
 				deployment</li>
-					<li>Network policies to enforce separation and the ability for developers to be in control</li>
+					<li><i>Network Policies</i> to enforce separation between projects and services</li>
+					<li><i>IaC</i> gives developers control of this through code</li>
 				</ul>
 			</section>
 
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Challenges</h2>
-				<p>Some challenges and issues we have faced</p>
+				<p>Some challenges we have faced</p>
 				<ul>
 					<li>Deployment of lots of new container images as well as patching of our clusters has meant throttling
 						 of our bandwidth and slow image pull times</li>
@@ -275,12 +276,12 @@
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Multiple Clusters</h2>
 				<ul>
-					<li>Azure ARO dev/test cluster - greater control of this and allows upgrade testing</li>
+					<li>Azure ARO dev/test cluster - greater control of this and allows OpenShift upgrade testing</li>
 					<li>For resiliency and high availability we have 2 geographically separated prod OCP clusters</li>
 					<li>LIVE/NONLIVE setup</li>
-					<li>Backbone connections (including MNOs) into data centres can be taken down for upgrades etc.</li>
-					<li>Ability for NONLIVE deployments and smoke testing prior to LIVE deployment</li>
-					<li>F5 with global traffic management - DNS strategy with short TTL</li>
+					<li>Handle backbone service connections (such as MNOs) into data centres being taken down for upgrades</li>
+					<li>Smoke testing NONLIVE deployments prior to LIVE deployment</li>
+					<li>F5 with global traffic management: DNS strategy with short TTL</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
@@ -304,7 +305,7 @@
 					<li>Improve container image delivery for constrained bandwidth and reduced risk with dependency on
 						external cloud-hosted registry</li>
 					<li>Custom Helm chart that incorporates a Docker registry as well as image synchronisation script
-						using Skopeo run as a CronJob and images stored on a PVC</li>
+						using <i>Skopeo</i> run as a CronJob and images stored on a PVC</li>
 				</ul>
 			</section>
 
@@ -346,7 +347,7 @@
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Future</h2>
+				<h2>Im summary and to the future...</h2>
 				<p>
 					The service has become a critical component of the emergency response system, significantly 
 					contributing to improving public safety outcomes and saving lives of New Zealanders.
