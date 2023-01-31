@@ -157,7 +157,7 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Constraints: what makes things harder?</h2>
 				<ul>
-					<li>Partial “air gap” due to security</li>
+					<li>Somewhat akin to an “air gap” due to security</li>
 					<li>Locked-down environment via multiple layers of access</li>
 					<li>Bandwidth constraints</li>
 					<li>Some required network messaging protocols, such as for 3G mobile, aren’t supported with public
@@ -194,7 +194,7 @@ Welcome to my slides :)
 					<li>Wrap scripts running on VMs in pipelines</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<p>
 					<b>High-Level Architecture Overview of ECLI</b><br>
 					<img src="images/ECLI-Architecture-Overview.png">
@@ -209,7 +209,7 @@ Welcome to my slides :)
 					<li>Reconfigure replicaSet member priorities to change the primary</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="none">
 				<h2>MongoDB Overview</h2>
 				<img src="images/mongodb.png">
 			</section>
@@ -258,13 +258,12 @@ Welcome to my slides :)
 					<li>Delineation between roles such as <b>developer</b> vs <b>admin</b> vs <b>support</b> along with <b>service accounts</b> for secure
 				deployment</li>
 					<li><b>Network Policies</b> to enforce separation between projects and services</li>
-					<li><b>IaC</b> gives developers control of this through code</li>
+					<li><b>IaC</b> gives developers control of this through code (that goes into Git)</li>
 				</ul>
 			</section>
 
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Challenges</h2>
-				<p>Some challenges we have faced</p>
+				<h2>Some challenges</h2>
 				<ul>
 					<li>Deployment of lots of new container images as well as patching of our clusters has meant throttling
 						 of our bandwidth and slow image pull times</li>
@@ -275,7 +274,7 @@ Welcome to my slides :)
 				</ul>
 			</section>
 
-			<section data-background-image="images/energy2-background.jpg">
+			<section data-background-image="images/energy2-background.jpg" data-transition="concave">
 				<h2 style="color:white">Reliability through Availability</h2>
 			</section>
 
@@ -298,7 +297,7 @@ Welcome to my slides :)
 					<li>Environment statuses changed, traffic manager DNS change and MongoDB primary shifted to new LIVE environment in other data centre</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>Failover Overview</h2>
 				<img src="images/Failover.png">
 			</section>
@@ -329,7 +328,7 @@ Welcome to my slides :)
 					<li>Safe deployments that are easy and repeatable aided by automated test suite</li>
 					<li>Automated container image rebuilding for patching</li>
 					<li>Enhanced security through DevSecOps such as container image scanning</li>
-					<li>Scalable platform for adding new applications that helps ongoing ECLI service certification & accreditation</li>
+					<li>We now have a scalable platform for adding new applications to, and which helps the ongoing government Certification & Accreditation of the ECLI service</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
@@ -344,14 +343,14 @@ Welcome to my slides :)
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Data Workshop Details</h2>
+				<h2>Some Extra Data Workshop Details</h2>
 				<ul>
-					<li>Containerised workloads such as Apache Airflow and Postgres</li>
-					<li>Apache Airflow provides workflow engine</li>
-					<li>Integration with PowerBI for reporting</li>
+					<li>Containerised Apache Airflow and Postgres</li>
+					<li>Apache Airflow provides a workflow engine</li>
+					<li>Integration with Microsoft PowerBI, via a PowerBI gateway for report building</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>Im summary and to the future...</h2>
 				<p>
 					The service has become a critical component of the emergency response system, significantly 
@@ -362,7 +361,7 @@ Welcome to my slides :)
 					5G, and Voice over Wi-Fi, ongoing enhancements to the Service will ensure it remains current. 
 				</p>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="concave">
 				<h2>Questions?</h2>
 			</section>
 			<!-- <section data-background-image="images/ecli-header-narrow.png">
