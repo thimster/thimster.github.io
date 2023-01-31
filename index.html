@@ -146,23 +146,25 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>DCSG's Govt.Container</h2>
 				<ul>
-					<li>Managed Datacom OpenShift offering for Govt clients incl. onshore support</li>
+					<li>Managed Datacom OpenShift offering for Government clients with onshore support</li>
 					<li>Multiple data centres for high availability and DR with low latency between Auckland and Hamilton</li>
-					<li>Ease of integration with other existing ECLI components already in DCSG</li>
+					<li>Ease of integration with existing ECLI components already in DCSG</li>
 					<li>OpenShift provides K8s-compatibility and native support for Helm</li>
-					<li>Ease of integration with Microsoft Azure DevOps and deployment of ADO build agents within DCSG
-						infrastructure and network</li>
+					<li>Ease of integration with Microsoft Azure DevOps</li>
+					<uL>
+						<li>ADO build agents deployed on existing DCSG infrastructure within the network</li>
+					</uL>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Constraints: what makes things harder?</h2>
+				<h2>Constraints:<br>what makes things harder?</h2>
 				<ul>
-					<li>Somewhat akin to an “air gap” due to security</li>
-					<li>Locked-down environment via multiple layers of access</li>
+					<li>Security means locked-down clusters via multiple layers of access, slightly similar
+						 to an “air gap”</li>
 					<li>Bandwidth constraints</li>
 					<li>Some required network messaging protocols, such as for 3G mobile, aren’t supported with public
 						cloud</li>
-					<li>Managed service means full admin not possible</li>
+					<li>Managed service means full <b>admin</b> not possible</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
@@ -181,17 +183,17 @@ Welcome to my slides :)
 				<h2>Core ECLI Containerised Services</h2>
 				<ul>
 					<li>Containerised microservices with APIs built in .NET on Linux</li>
-					<li>Containerised message bus (RabbitMQ) with high-availability</li>
-					<li>Containerised NoSQL MongoDB database for short-lived, schema-less data with high-availability</li>
+					<li>Containerised high-availability RabbitMQ message bus</li>
+					<li>Containerised high-availability NoSQL MongoDB database for short-lived, schema-less data</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Azure DevOps</h2>
 				<ul>
-					<li>Pipelines for build, release and repeatable tasks (e.g. failover)</li>
+					<li>Pipelines for build, release and repeatable tasks<br>(e.g. failover)</li>
 					<li>Azure build agents allow a more secure model of running behind firewalls and reaching out for jobs</li>
 					<li>Integration with Azure services such as Git, KeyVault and Container Registry</li>
-					<li>Wrap scripts running on VMs in pipelines</li>
+					<li>Wrap scripts running on build agent VMs with ADO pipelines</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
@@ -203,10 +205,10 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>MongoDB</h2>
 				<ul>
-					<li>ReplicaSets for H.A. within an environment: 1 primary + multiple secondaries</li>
+					<li>High availability <b>replica sets</b> within an environment:<br>1 primary and multiple secondaries</li>
 					<li>"Stretch cluster" across data centres for increased H.A.</li>
-					<li>Non-voting "standby" MongoDB replica to allow quorum in a data centre</li>
-					<li>Reconfigure replicaSet member priorities to change the primary</li>
+					<li>Non-voting "standby" MongoDB replica allows a quorum in a data centre (3 out of 5)</li>
+					<li>Reconfiguring the replica set member priorities triggers an election and changes the primary</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="none">
@@ -214,21 +216,27 @@ Welcome to my slides :)
 				<img src="images/mongodb.png">
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Helm</h2>
+				<h2>Helm:<br>The package manager for Kubernetes</h2>
 				<ul>
-					<li>The package manager for Kubernetes</li>
-					<li>Charts represent a bundle of K8s/OCP manifests and container image references</li>
+					<li><b>Helm Charts</b> represent a bundle of OpenShift manifests that have container image references</li>
+					<li>Easy to just deploy microservice updates through changing the referenced image through an ADO variable,
+						updated during the CI/CD process</li>
 					<li>Charts can contain upstream subcharts</li>
-					<li>Deployment mechanism allows allows easy install and upgrade into a container platform</li>
+					<li>Deployment mechanism allows allows easy installing, upgrading and deleting</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Helm Continued</h2>
+				<h2>More about Helm for us</h2>
 				<ul>
-					<li>OO design - clean naming for clear delineation between microservices</li>
-					<li>ECLI treat charts as “applications” bundles</li>
-					<li>This smaller "application" bundle split gives us installation flexibility: same OCP  
-						project, different projects, multiple times in the same project or different clusters</li>
+					<li>OO design - clean naming and clear delineation between microservice bundles</li>
+					<li>ECLI: treat a Helm chart as an “application" bundle</li>
+					<li>This smaller "application" bundle split gives us installation flexibility:</li>
+					<ul>
+						<li>The same OCP project</li>
+						<li>Different projects</li>
+						<li>Multiple times into the same project</li>
+						<li>Different clusters</li>
+					</ul>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
