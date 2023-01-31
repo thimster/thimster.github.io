@@ -240,7 +240,7 @@
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Environments</h2>
 				<ul>
-					<li>Test and Stable on Azure ARO cluster</li>
+					<li>Test and Stable on Azure Red Hat OpenShift (ARO) cluster</li>
 					<li>SIT and PROD on both clusters Govt.Container</li>
 				</ul>
 			</section>
@@ -248,11 +248,11 @@
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Projects, networking and RBAC</h2>
 				<ul>
-					<li>SIT and PROD</li>
-					<li>Delineation between roles such as <i>developer</i> vs <i>admin</i> vs <i>support</i> along with <i>service accounts</i> for secure
+					<li>SIT and PROD separated by access permissions and networking</li>
+					<li>Delineation between roles such as <b>developer</b> vs <b>admin</b> vs <b>support</b> along with <b>service accounts</b> for secure
 				deployment</li>
-					<li><i>Network Policies</i> to enforce separation between projects and services</li>
-					<li><i>IaC</i> gives developers control of this through code</li>
+					<li><b>Network Policies</b> to enforce separation between projects and services</li>
+					<li><b>IaC</b> gives developers control of this through code</li>
 				</ul>
 			</section>
 
@@ -278,19 +278,18 @@
 				<ul>
 					<li>Azure ARO dev/test cluster - greater control of this and allows OpenShift upgrade testing</li>
 					<li>For resiliency and high availability we have 2 geographically separated prod OCP clusters</li>
-					<li>LIVE/NONLIVE setup</li>
 					<li>Handle backbone service connections (such as MNOs) into data centres being taken down for upgrades</li>
 					<li>Smoke testing NONLIVE deployments prior to LIVE deployment</li>
-					<li>F5 with global traffic management: DNS strategy with short TTL</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Failover</h2>
 				<ul>
+					<li>F5 with global traffic management: DNS strategy with short TTL</li>
 					<li>Manual and automated failover</li>
 					<li>Automated detection of LIVE not being healthy and NONLIVE promoted</li>
 					<li>Triggered failover via ADO pipeline - takes a few seconds to run</li>
-					<li>Traffic manager DNS change and MongoDB primary shifted to new LIVE data centre environment</li>
+					<li>Environment statuses changed, traffic manager DNS change and MongoDB primary shifted to new LIVE environment in other data centre</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
@@ -305,7 +304,7 @@
 					<li>Improve container image delivery for constrained bandwidth and reduced risk with dependency on
 						external cloud-hosted registry</li>
 					<li>Custom Helm chart that incorporates a Docker registry as well as image synchronisation script
-						using <i>Skopeo</i> run as a CronJob and images stored on a PVC</li>
+						using <b>Skopeo</b> run as a CronJob and images stored on a PVC</li>
 				</ul>
 			</section>
 
@@ -328,7 +327,7 @@
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Next: R&A Data Science application</h2>
+				<h2>Currently: Replatforming Data Science application</h2>
 				<ul>
 					<li>We require a lot of analysis over our data to help provide insights, troubleshoot
 						potential issues & provide reports</li>
