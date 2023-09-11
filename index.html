@@ -37,63 +37,68 @@ Welcome to my slides :)
 			<!-- <section data-background-image="images/cover-slide-background.png"> -->
 			<section data-background-image="images/helicopter-background.jpg">
 				<img src="images/ecli-header.png" class="r-stretch">
-				<br><br><br><br><br><br><h2>Emergency Caller Location Information</h2>
-				<h4>
-					Tim Higgs / ECLI Solutions Architect / MBIE
-				</h4>
+				<!-- <br><br> -->
+				<h4>Tim Higgs / ECLI Solutions Architect / MBIE</h4>
+				<br><br><br><br>
+				<h2>Emergency Caller Location Information</h2>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<img src="images/ecli-header.png">
 				<h3>Our journey today:</h3>
-				<h4>so, tell me - what is ecli?<br>
-					what have you designed and built?<br>
-					what are some challenges you have overcome?<br><br>
-					oh - and tell me a bit about how you're using OpenShift
-				</h4>
+				<h4>What is ECLI<br>and<br>how does MongoDB fit into the picture?</h4>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>About Me</h2>
 				<ul>
 					<li>BSc Comp Sci, BA Philosophy Victoria University</li>
 					<li>25+ years in web application development</li>
-					<li>3 1/2 years as a Solutions Architect at MBIE on ECLI including DevOps CI/CD and Kubernetes-compatible
+					<li>4 years as a Solutions Architect at MBIE on ECLI including DevOps CI/CD and Kubernetes-compatible
 						OpenShift development</li>
 					<li>Interests in the blending of technology with design, adventure travel (including skiing, diving and 
-						motorbiking) and music</li>
+						motorbiking) and music.</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Introduction</h2>
-				<ul>
-					<li>Every year millions of emergency calls are made in New Zealand; being able to ascertain 
-						the location of an emergency is critical to enable emergency service to
-						best help those in need</li>
-					<li>These days most people have a mobile device on them that can be used to calculate an accurate location;
-						currently 84% of 111 calls originate from a mobile (16% from landlines) which works out to around 1.3 million
-						genuine calls on mobile networks so it makes sense to look to leverage that for ascertaining location</li>
-						</ul>
-				</ul>
+				<p>Every year millions of emergency calls are made in New Zealand.</p>
+				<p>Being able to ascertain the location of an emergency is critical to enable emergency service to
+						best help those in need.</p>
 			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Mobile Phones</h2>
+				<p>These days most people have a mobile device on them that can be used to calculate an accurate location:</p>
+				<ul>
+					<li>Currently 84% of 111 calls originate from a mobile (16% from landlines).</li>
+					<li>That works out to around 1.3 million genuine calls on mobile networks.</li>
+				</ul>
+				<br><br>
+				<h4>It makes sense to ascertain mobile location to aid emergency services.</h4>
+			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h3>Emergency calls are often times of great stress. Additionally:</h3>
 				<ul>
-					<li>People may not know where they are (there have been instances of hikers lost in remote
-						locations)</li>
-					<li>There are frequent instances of people being unable to speak during a call (such as instances of
-						domestic violence and injury)</li>
+					<li>People may not know where they are (such as hikers lost in remote
+						locations).</li>
+					<li>There are frequent instances of people being unable to speak during a call (such as 
+						domestic violence and injury).</li>
 					<li>There are times when people hang up before there’s been a chance to get their location from them
-						(such as depressive or suicidal calls)</li>
+						(such as depressive or suicidal calls).</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="convex">
 				<h2>What is ECLI?</h2>
 				<ul>
 					<li>A service within Ministry of Business, Innovation and Employment delivered as part of the 
-						Government's Communications portfolio</li>
+						Government's Communications portfolio.</li>
 					<li>Our system receives and processes mobile location information when an emergency (111) call is made
 						from a mobile device over a cellular network details and makes the likely 
-						location of the caller available to authorised emergency service providers</li>
-					<li>This helps them respond to emergencies as quickly as possible</li>
+						location of the caller available to authorised emergency service providers.</li>
+					<li>This helps them respond to emergencies as quickly as possible.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
@@ -111,122 +116,157 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>ECLI Background</h2>
 				<ul>
-					<li>An inital build of the service originally deployed in 2017</li>
+					<li>An inital build of the service originally deployed in 2017.</li>
 					<li>In 2019 ECLI undertook a redesign + rebuild for greater flexibility, to leverage containerisation
-						and incorporate modern DevOps practices along with a suite of automated regression tests</li>
+						and incorporate modern DevOps practices along with a suite of automated regression tests.</li>
 					<li>This new system successfully went live in October 2021 and the new platform has already realised
-						many of the rebuild goals</li>
+						many of the rebuild goals.</li>
 				</ul>
 			</section>
 				<section data-background-image="images/energy-background.jpg">
 					<br><br><br>
-					<h2 style="color:white">Service availability is<br>essential<br>as ECLI is a critical service</h2>
+					<h2 style="color:white">ECLI provides a critical<br>service<br>availability is essential</h2>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Containerisation?</h2>
 				<ul>
-					<li>Containerisation promotes component delineation and supports a scalable microservices architecture</li>
-					<li>Leverage CI/CD integration</li>
-					<li>Safer releases when deploying microservice updates independent of
-					others</li>
-					<li>Running the same service (with bundled runtime) anywhere helps testing and deployment</li>
-					<li>Zero-downtime with rolling deployments with multiple containers per microservice</li>
+					<li>Containerisation promotes component delineation and supports a scalable microservices architecture.</li>
+					<li>Leverage CI/CD for builds and deployments.</li>
+					<li>Safer releases through automated deployments of independent microservice updates.</li>
+					<li>Running the same code + bundled runtime anywhere helps testing and deployment.</li>
+					<li>Zero-downtime with rolling deployments and multiple container instances per microservice.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Kubernetes?</h2>
 				<ul>
-					<li>Scalable, stable container runtime orchestrator</li>
-					<li>Flexibility, portability and provision of PaaS for containers</li>
-					<li>Very widely used and great longterm solution - represents the future</li>
-					<li>Network policies and RBAC allow multiple locked down, segregated environments on a single cluster</li>
-					<li>IaC empowers developers through access to orchestration-through-code and makes many things possible including ease
-						 of standing up new environments</li>
+					<li>Scalable, stable container runtime orchestrator.</li>
+					<li>Flexibility, portability and provision of PaaS for containers.</li>
+					<li>Very widely used and great longterm solution - represents the future.</li>
+					<li>Network policies and RBAC allow multiple locked down, segregated environments on a single cluster.</li>
+					<li>IaC empowers developers</li>
+					<li>Orchestration-through-code and makes many things possible: e.g. ease of standing up new environments.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>DCSG's Govt.Container</h2>
 				<ul>
-					<li>Managed Datacom OpenShift offering for Government clients with onshore support</li>
-					<li>Multiple data centres for high availability and DR with low latency between Auckland and Hamilton</li>
-					<li>Ease of integration with existing ECLI components already in DCSG</li>
-					<li>OpenShift provides K8s-compatibility and native support for Helm</li>
-					<li>Ease of integration with Microsoft Azure DevOps</li>
-					<uL>
-						<li>ADO build agents deployed on existing DCSG infrastructure within the network</li>
+					<li>Managed Datacom onshore OpenShift offering for Government.</li>
+					<li>Data centres in Auckland and Hamilton with low latency for high availability and DR.</li>
+					<li>Integration with existing ECLI components already in DCSG.</li>
+					<li>OpenShift provides K8s-compatibility and native support for Helm.</li>
+					<li>Microsoft Azure DevOps build agents deployed on existing DCSG infrastructure within the network.</li>
 					</uL>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Constraints:<br>what makes things harder?</h2>
 				<ul>
-					<li>Security means locked-down clusters via multiple layers of access, slightly similar
-						 to an “air gap”</li>
-					<li>Bandwidth constraints</li>
 					<li>Some required network messaging protocols, such as for 3G mobile, aren’t supported with public
-						cloud</li>
-					<li>Managed service means full <b>admin</b> not possible</li>
+						cloud.</li>
+					<li>Security means locked-down clusters via multiple layers of access, similar
+						 to an “air gap”.</li>
+					<li>Bandwidth constraints.</li>
+					<li>Managed service means full <b>admin</b> not possible.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Architecture details</h2>
 				<ul>
-					<li>Backbone services, including integration into mobile network operators</li>
+					<li>Backbone services, including integration into mobile network operators.</li>
 					<ul>
-						<li>Vodafone, 2Degrees and Spark</li>
+						<li>Vodafone, 2Degrees and Spark.</li>
 					</ul>
-					<li>Supporting DCSG infrastructure for network connections and also VMs to facilitate DevOps</li>
-					<li>Container platform provided by OpenShift</li>
-					<li>Azure for DevOps and some cloud services</li>
+					<li>Supporting DCSG infrastructure for network connections and VMs to facilitate DevOps.</li>
+					<li>Container platform provided by OpenShift.</li>
+					<li>Azure for DevOps and some cloud services.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Core ECLI Containerised Services</h2>
+				<h2>Containerised Services</h2>
 				<ul>
-					<li>Containerised microservices with APIs built in .NET on Linux</li>
-					<li>Containerised high-availability RabbitMQ message bus</li>
-					<li>Containerised high-availability NoSQL MongoDB database for short-lived, schema-less data</li>
+					<li>Containerised microservices with APIs built in .NET on Linux.</li>
+					<li>Containerised high-availability RabbitMQ message bus.</li>
+					<li>Containerised high-availability NoSQL MongoDB database for short-lived, schema-less data.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Azure DevOps</h2>
 				<ul>
-					<li>Pipelines for build, release and repeatable tasks<br>(e.g. failover)</li>
-					<li>Azure build agents allow a more secure model of running behind firewalls and reaching out for jobs</li>
-					<li>Integration with Azure services such as Git, KeyVault and Container Registry</li>
-					<li>Wrap scripts running on build agent VMs with ADO pipelines</li>
+					<li>Pipelines for build, release and repeatable tasks<br>(such as failover).</li>
+					<li>Azure build agents allow a more secure model of running behind firewalls and reaching out for jobs.</li>
+					<li>Integration with Azure services such as Git, KeyVault and Container Registry.</li>
+					<li>Wrap scripts running on build agent VMs with ADO pipelines.</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<p>
 					<b>High-Level Architecture Overview of ECLI</b><br>
 					<img src="images/ECLI-Architecture-Overview.png">
 				</p>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>MongoDB</h2>
+				<h2>Why MongoDB?</h2>
 				<ul>
-					<li>High availability <b>replica sets</b> within an environment:<br>1 primary and multiple secondaries</li>
-					<li>"Stretch cluster" across data centres for increased H.A.</li>
-					<li>Non-voting "standby" MongoDB replica allows a quorum in a data centre (3 out of 5)</li>
-					<li>Reconfiguring the replica set member priorities triggers an election and changes the primary</li>
+					<li>ECLI require short-term storage of location information for emergency calls that can be quickly retrieved.</li>
+					<li>Storing the data schemaless makes deployments easier, especially across multiple sites.</li>
+					<li>Preference for well-supported open source projects with containerisation options.</li>
+					<li>Replication support for high availability.</li>
 				</ul>
 			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Database Containerisation</h2>
+				<p>There are complexities, however databasse containerisation can provide great benefits:</p>
+				<ul>
+					<li>Easy to stand up new environments.</li>
+					<li>Leverage same CI/CD model.</li>
+					<li>Easier upgrades.</li>
+					<li>Single containerisation platform.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Database Containerisation Challenges</h2>
+				<ul>
+					<li>Performance tuning.</li>
+					<li>DBA knowledge learning curve.</li>
+					<li>Complexities with replication setup.</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>ECLI's MongoDB Setup</h2>
+				<ul>
+					<li>MongoDB version 5.</li>
+					<li>TLS connections.</li>
+					<li>High availability <b>replicaSet</b> with 1 primary and multiple secondaries.</li>
+					<li>"Stretch cluster" across data centres for increased H.A. and failover.</li>
+					<li>Low latency allowing synchronous replication.</li>
+					<li>Non-voting "<b>standby secondary</b>" MongoDB replica allows a quorum in a data centre (3 out of 5).</li>
+					<li>Reconfiguring the replicaSet member priorities triggers an election and changes the primary.</li>
+				</ul>
+			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="none">
 				<h2>MongoDB Overview</h2>
 				<img src="images/mongodb.png">
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Helm:<br>The package manager for Kubernetes</h2>
+				<h2>Helm: A K8s package manager</h2>
 				<ul>
-					<li><b>Helm Charts</b> represent a bundle of OpenShift manifests that have container image references</li>
-					<li>Easy to just deploy microservice updates through changing the referenced image through an ADO variable,
-						updated during the CI/CD process</li>
-					<li>Charts can contain upstream subcharts</li>
-					<li>Deployment mechanism allows allows easy installing, upgrading and deleting</li>
+					<li><b>Helm Charts</b> represent a bundle of OpenShift manifests that have container image references.</li>
+					<li>Easy to just deploy updates through changing the referenced image through an ADO variable,
+						updated during the CI/CD process.</li>
+					<li>Charts can contain upstream subcharts.</li>
+					<li>Deployment mechanism allows allows easy installing, upgrading and deleting.</li>
+					<li>MongoDB deployed as a Helm chart.</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>More about Helm for us</h2>
 				<ul>
 					<li>OO design - clean naming and clear delineation between microservice bundles</li>
@@ -250,17 +290,9 @@ Welcome to my slides :)
 					<li>Easier for CI/CD</li>
 					<li>Container registries support chart storage</li>
 				</ul>
-			</section>
+			</section> -->
 
-			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Environments</h2>
-				<ul>
-					<li>Test and Stable on Azure Red Hat OpenShift (ARO) cluster</li>
-					<li>SIT and PROD on both clusters Govt.Container</li>
-				</ul>
-			</section>
-
-			<section data-background-image="images/ecli-header-narrow.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Projects, networking and RBAC</h2>
 				<ul>
 					<li>SIT and PROD separated by access permissions and networking</li>
@@ -269,8 +301,9 @@ Welcome to my slides :)
 					<li><b>Network Policies</b> to enforce separation between projects and services</li>
 					<li><b>IaC</b> gives developers control of this through code (that goes into Git)</li>
 				</ul>
-			</section>
+			</section> -->
 
+			<!-- 
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Some challenges</h2>
 				<ul>
@@ -281,13 +314,13 @@ Welcome to my slides :)
 					<li>Integration into automated alerting ticketing system</li>
 					<li>Inter-data centre connection outage leading to MongoDB disruption</li>
 				</ul>
-			</section>
+			</section> -->
 
 			<section data-background-image="images/energy2-background.jpg" data-transition="concave">
 				<h2 style="color:white">Reliability through Availability</h2>
 			</section>
 
-			<section data-background-image="images/ecli-header-narrow.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Multiple Clusters</h2>
 				<ul>
 					<li>Azure ARO dev/test cluster - greater control of this and allows OpenShift upgrade testing</li>
@@ -295,22 +328,54 @@ Welcome to my slides :)
 					<li>Handle backbone service connections (such as MNOs) into data centres being taken down for upgrades</li>
 					<li>Smoke testing NONLIVE deployments prior to LIVE deployment</li>
 				</ul>
+			</section> -->
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Things are surprisingly complex</h2>
+				<p>The complexity of our system with all its components and their interconnections mean we often require flexibility.</p>
+				<ul>
+					<li>Patching and upgrades of infrastructure components.</li>
+					<li>Smoke testing of releases.</li>
+					<li>Unplanned incidents.</li>
+				</ul>
 			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Multiple Environments</h2>
+				<ul>
+					<li>We have multiple environments across 3 OpenShift clusters.</li>
+					<li>MongoDB replicaSet is installed (via Helm) into each of them.</li>
+					<li>Data stored on <b>Persistent Volume Claims</b>.</li>
+				</ul>
+			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Failover</h2>
 				<ul>
-					<li>F5 with global traffic management: DNS strategy with short TTL</li>
-					<li>Manual and automated failover</li>
-					<li>Automated detection of LIVE not being healthy and NONLIVE promoted</li>
-					<li>Triggered failover via ADO pipeline - takes a few seconds to run</li>
-					<li>Environment statuses changed, traffic manager DNS change and MongoDB primary shifted to new LIVE environment in other data centre</li>
+					<li>F5 with global traffic management: DNS strategy with short TTL.</li>
+					<li>Manual and automated failover.</li>
+					<li>Automated detection of LIVE not being healthy and NONLIVE promoted.</li>
+					<li>Triggered failover via ADO pipeline - takes a few seconds to run.</li>
+					<li>Environment statuses changed, traffic manager DNS change and MongoDB primary shifted to new LIVE environment in other data centre.</li>
 				</ul>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>Failover Overview</h2>
 				<img src="images/Failover.png">
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
+				<h2>Failover Overview</h2>
+				<ul>
+					<li>Failover reconfigures MongoDB replicaSet.</li>
+					<li>Change of replicaSet priorities allows Primary to be moved and for secondaries to favour the new LIVE site.</li>
+					<li>Non-voting repliocaSet member changed from one site to the other site:</li>
+					<ul>
+						<li>As it already stores a copy of the data, it comes online immediately.</li>
+					</ul>
+					<li>Quorum now held in the new LIVE site.</li>
+				</ul>
+			</section>
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Container Registry</h2>
 				<ul>
 					<li>Container registry solution within each cluster to facilitate quick image pulls and remove external Azure cloud 
@@ -320,28 +385,40 @@ Welcome to my slides :)
 					<li>Custom Helm chart that incorporates a Docker registry as well as image synchronisation script
 						using <b>Skopeo</b> run as a CronJob and images stored on a PVC</li>
 				</ul>
+			</section> -->
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Health Checks</h2>
+				<ul>
+					<li>To ensure application heath, we make use of <b>liveness</b> and <b>readiness</b> checks in Kubernetes.</li>
+					<li>Failure will trigger auto-healing to restart containers and prevent traffic to affected containers.</li>
+					<li>We incorporate MongoDB checking where appropriate.</li>
+					<li>Our main site healthcheck incorporates MongoDB checking; failure of this will lead to an automatic failover.</li>
+				</ul>
 			</section>
 
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Monitoring and alerting</h2>
 				<ul>
-					<li>Dynatrace - cloud-hosted service provided as part of Datacom application support</li>
-					<li>Integrated via an installed OCP Dynatrace operator</li>
-					<li>Alert profiles based upon certain observed errors etc</li>
-					<li>Integration with ticket management for 24/7 support and MS Teams notifications</li>
+					<li>Dynatrace - cloud-hosted service for application support.</li>
+					<li>Monitoring of minimum number of MongoDB containers as well as connectivity.</li>
+					<li>Alert profiles based upon certain observed errors.</li>
+					<li>Integration with ticket management for 24/7 support and MS Teams notifications.</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>We've realised these benefits</h2>
 				<ul>
-					<li>Great uptime and most releases are now zero-downtimes</li>
-					<li>Safe deployments that are easy and repeatable aided by automated test suite</li>
-					<li>Automated container image rebuilding for patching</li>
-					<li>Enhanced security through DevSecOps such as container image scanning</li>
-					<li>We now have a scalable platform for adding new applications to, and which helps the ongoing government Certification & Accreditation of the ECLI service</li>
+					<li>Great uptime with zero-downtime releases.</li>
+					<li>MongoDB has been very reliable.</li>
+					<li>Safe deployments that are easy and repeatable aided by automated test suite.</li>
+					<li>Automated container image rebuilding for patching.</li>
+					<li>Enhanced security through DevSecOps such as container image scanning.</li>
+					<li>We now have a scalable platform for adding new applications to.</li>
 				</ul>
 			</section>
-			<section data-background-image="images/ecli-header-narrow.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Currently: Replatforming Data Science application</h2>
 				<ul>
 					<li>We require a lot of analysis over our data to help provide insights, troubleshoot
@@ -359,7 +436,7 @@ Welcome to my slides :)
 					<li>Apache Airflow provides a workflow engine</li>
 					<li>Integration with Microsoft PowerBI, via a PowerBI gateway for report building</li>
 				</ul>
-			</section>
+			</section> -->
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>In summary and to the future...</h2>
 				<p>
@@ -368,7 +445,7 @@ Welcome to my slides :)
 				</p>
 				<p>
 					With anticipation of a higher number of emergency calls being made over new technologies, including 
-					5G, and Voice over Wi-Fi, ongoing enhancements to the Service will ensure it remains current. 
+					5G, and Voice over Wi-Fi, ongoing enhancements to the service will ensure it remains current. 
 				</p>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="concave">
