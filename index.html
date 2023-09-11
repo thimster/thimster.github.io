@@ -51,10 +51,10 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>About Me</h2>
 				<ul>
-					<li>BSc Comp Sci, BA Philosophy Victoria University</li>
-					<li>25+ years in web application development</li>
+					<li>BSc Comp Sci, BA Philosophy Victoria University.</li>
+					<li>25+ years in web application development.</li>
 					<li>4 years as a Solutions Architect at MBIE on ECLI including DevOps CI/CD and Kubernetes-compatible
-						OpenShift development</li>
+						OpenShift development.</li>
 					<li>Interests in the blending of technology with design, adventure travel (including skiing, diving and 
 						motorbiking) and music.</li>
 				</ul>
@@ -101,6 +101,7 @@ Welcome to my slides :)
 					<li>This helps them respond to emergencies as quickly as possible.</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Emergency Service Providers</h2>
 				<ul>
@@ -109,10 +110,12 @@ Welcome to my slides :)
 					<li>St John and Wellington Free Ambulance</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/cover-slide-background.png" style="color:black" data-transition="zoom">
 				<h3><br>ECLI saves lives by<br>
 					decreasing the time taken to verify location and<br> reducing the average incident dispatch time</h3>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>ECLI Background</h2>
 				<ul>
@@ -123,10 +126,12 @@ Welcome to my slides :)
 						many of the rebuild goals.</li>
 				</ul>
 			</section>
-				<section data-background-image="images/energy-background.jpg">
-					<br><br><br>
-					<h2 style="color:white">ECLI provides a critical<br>service<br>availability is essential</h2>
+
+			<section data-background-image="images/energy-background.jpg">
+				<br><br><br>
+				<h2 style="color:white">ECLI provides a critical<br>service<br>availability is essential</h2>
 			</section>
+			
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Containerisation?</h2>
 				<ul>
@@ -137,17 +142,19 @@ Welcome to my slides :)
 					<li>Zero-downtime with rolling deployments and multiple container instances per microservice.</li>
 				</ul>
 			</section>
+			
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Why Kubernetes?</h2>
 				<ul>
 					<li>Scalable, stable container runtime orchestrator.</li>
 					<li>Flexibility, portability and provision of PaaS for containers.</li>
 					<li>Very widely used and great longterm solution - represents the future.</li>
-					<li>Network policies and RBAC allow multiple locked down, segregated environments on a single cluster.</li>
-					<li>IaC empowers developers</li>
+					<li>Network policies and RBAC allow multiple locked-down, segregated environments on a single cluster.</li>
+					<li>IaC empowers developers.</li>
 					<li>Orchestration-through-code and makes many things possible: e.g. ease of standing up new environments.</li>
 				</ul>
 			</section>
+			
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>DCSG's Govt.Container</h2>
 				<ul>
@@ -156,24 +163,31 @@ Welcome to my slides :)
 					<li>Integration with existing ECLI components already in DCSG.</li>
 					<li>OpenShift provides K8s-compatibility and native support for Helm.</li>
 					<li>Microsoft Azure DevOps build agents deployed on existing DCSG infrastructure within the network.</li>
-					</uL>
+				</uL>
 				</ul>
 			</section>
+
+			
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>Constraints:<br>what makes things harder?</h2>
+				<h2>Constraints:<br>what makes things harder for us?</h2>
 				<ul>
 					<li>Some required network messaging protocols, such as for 3G mobile, aren’t supported with public
 						cloud.</li>
-					<li>Security means locked-down clusters via multiple layers of access, similar
-						 to an “air gap”.</li>
-					<li>Bandwidth constraints.</li>
-					<li>Managed service means full <b>admin</b> not possible.</li>
-				</ul>
+						<li>Security means locked-down clusters via multiple layers of access, similar
+							to an “air gap”.</li>
+							<li>Bandwidth constraints.</li>
+							<li>Managed service means full <b>admin</b> not possible.</li>
+						</ul>
+					</section>
+					
+			<section data-background-image="images/architecture.jpg">
+				<h2 style="color:white">ECLI Architecture</h2>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Architecture details</h2>
-				<ul>
-					<li>Backbone services, including integration into mobile network operators.</li>
+					<ul>
+							<li>Backbone services, including integration into mobile network operators.</li>
 					<ul>
 						<li>Vodafone, 2Degrees and Spark.</li>
 					</ul>
@@ -182,6 +196,7 @@ Welcome to my slides :)
 					<li>Azure for DevOps and some cloud services.</li>
 				</ul>
 			</section>
+
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Containerised Services</h2>
 				<ul>
