@@ -186,14 +186,12 @@ Welcome to my slides :)
 
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Architecture details</h2>
-					<ul>
-						<li>Backbone services, including integration into the 3 mobile network operators:</li>
-						<ul>
-							<li>Vodafone, 2Degrees and Spark.</li>
-						</ul>
-					<li>DCSG infrastructure for network connections and VMs to facilitate DevOps.</li>
-					<li>Container platform provided by OpenShift.</li>
-					<li>Azure for DevOps and some cloud services.</li>
+				<ul>
+					<li>DCSG infrastructure for network connections and VMs hosting various services.</li>
+					<li>Backbone integration into the 3 mobile network operators:<br>
+						Vodafone, 2Degrees and Spark.</li>
+					<li>OpenShift container platform.</li>
+					<li>Azure DevOps and Azure SaaS.</li>
 				</ul>
 			</section>
 
@@ -209,7 +207,8 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Azure DevOps</h2>
 				<ul>
-					<li>Pipelines for build, release and repeatable tasks<br>(such as failover).</li>
+					<li>Pipelines for CI/CD build and release.</li>
+					<li>Pipelines for repeatable tasks such as failover.</li>
 					<li>Integration with Azure services such as Git, KeyVault and Container Registry.</li>
 					<li>Azure build agents allow a more secure model of running behind firewalls and reaching out for jobs.</li>
 				</ul>
@@ -255,8 +254,7 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>ECLI's MongoDB Setup</h2>
 				<ul>
-					<li>MongoDB version 5.</li>
-					<li>TLS connections.</li>
+					<li>MongoDB version 5 with TLS and .NET clients.</li>
 					<li>High availability <b>replicaSet</b> with 1 primary and multiple secondaries.</li>
 					<li>"<b>Stretch cluster</b>" across data centres for increased H.A. and failover.</li>
 					<li>Low latency allowing synchronous replication.</li>
@@ -347,22 +345,22 @@ Welcome to my slides :)
 
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Things are surprisingly complex</h2>
-				<p>The complexity of our system with all its components and their interconnections mean we often require flexibility.</p>
+				<p>Complexity through many moving parts mean we require flexibility and resilience.</p>
 				<ul>
-					<li>Patching and upgrades of infrastructure components.</li>
-					<li>Smoke testing of releases.</li>
-					<li>Unplanned incidents.</li>
+					<li>Handle frequent infrastructure patching and upgrades.</li>
+					<li>Handle unplanned incidents.</li>
+					<li>Smoke testing of releases once in PROD.</li>
 				</ul>
 			</section>
 
-			<section data-background-image="images/ecli-header-narrow.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Multiple Environments</h2>
 				<ul>
 					<li>We have multiple environments across 3 OpenShift clusters.</li>
 					<li>MongoDB replicaSet is installed (via Helm) into each of them.</li>
 					<li>Data stored on <b>Persistent Volume Claims</b>.</li>
 				</ul>
-			</section>
+			</section> -->
 
 			<section data-background-image="images/ecli-header-narrow.png">
 				<h2>Failover</h2>
@@ -412,7 +410,7 @@ Welcome to my slides :)
 				</ul>
 			</section>
 
-			<section data-background-image="images/ecli-header-narrow.png">
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
 				<h2>Monitoring and alerting</h2>
 				<ul>
 					<li>Dynatrace - cloud-hosted service for application support.</li>
@@ -420,17 +418,15 @@ Welcome to my slides :)
 					<li>Alert profiles based upon certain observed errors.</li>
 					<li>Integration with ticket management for 24/7 support and MS Teams notifications.</li>
 				</ul>
-			</section>
+			</section> -->
 
 			<section data-background-image="images/ecli-header-narrow.png">
-				<h2>We've realised these benefits</h2>
+				<h2>The benefits so far:</h2>
 				<ul>
-					<li>Great uptime with zero-downtime releases.</li>
-					<li>MongoDB has been very reliable.</li>
-					<li>Safe deployments that are easy and repeatable aided by automated test suite.</li>
-					<li>Automated container image rebuilding for patching.</li>
-					<li>Enhanced security through DevSecOps such as container image scanning.</li>
-					<li>We now have a scalable platform for adding new applications to.</li>
+					<li>Easy, repeatable and safe deployments.</li>
+					<li>Great uptime with zero-downtime releases due to containerisation & multiple clusters with fast failover.</li>
+					<li>MongoDB and RabbitMQ have been very reliable.</li>
+					<li>A scalable platform we can easily add new applications to.</li>
 				</ul>
 			</section>
 			<!-- <section data-background-image="images/ecli-header-narrow.png">
@@ -455,12 +451,12 @@ Welcome to my slides :)
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
 				<h2>In summary and to the future...</h2>
 				<p>
-					These days the ECLI service has become a critical component of the emergency response system, 
+					The ECLI service has become a critical component of the emergency response system, 
 					helping improve public safety outcomes and saving lives of New Zealanders.
 				</p>
 				<p>
-					With anticipation of a higher number of emergency calls being made over new technologies, including 
-					5G, and Voice over Wi-Fi, ongoing enhancements to the service will ensure it remains current. 
+					With anticipation of a higher number of emergency calls being made over new technologies such as 
+					5G, Voice over Wi-Fi and smart devices, ongoing enhancements to the service will ensure it remains current. 
 				</p>
 			</section>
 			<section data-background-image="images/ecli-header-narrow.png" data-transition="concave">
