@@ -15,10 +15,385 @@ Welcome to my slides :)
  -->
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ECLI - Red Hat OpenShift Presentation</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+	<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+	<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+	<link rel="stylesheet" href="dist/theme/moon.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
 
 <body>
-Placeholder
+	<div class="reveal">
+		<div class="slides">
+			<!-- <section data-background-image="images/cover-slide-background.png"> -->
+			<section data-background-image="images/helicopter-background.jpg">
+				<img src="images/ecli-header.png" class="r-stretch">
+				<br><br><br><br><br><br><h2>Emergency Caller Location Information</h2>
+				<h4>
+					Tim Higgs / ECLI Solutions Architect / MBIE
+				</h4>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<img src="images/ecli-header.png">
+				<h3>Our journey today:</h3>
+				<h4>so, tell me - what is ecli?<br>
+					what have you designed and built?<br>
+					what are some challenges you have overcome?<br><br>
+					oh - and tell me a bit about how you're using OpenShift
+				</h4>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
+				<h2>About Me</h2>
+				<ul>
+					<li>BSc Comp Sci, BA Philosophy Victoria University</li>
+					<li>25+ years in web application development</li>
+					<li>3 1/2 years as a Solutions Architect at MBIE on ECLI including DevOps CI/CD and Kubernetes-compatible
+						OpenShift development</li>
+					<li>Interests in the blending of technology with design, adventure travel (including skiing, diving and 
+						motorbiking) and music</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Introduction</h2>
+				<ul>
+					<li>Every year millions of emergency calls are made in New Zealand; being able to ascertain 
+						the location of an emergency is critical to enable emergency service to
+						best help those in need</li>
+					<li>These days most people have a mobile device on them that can be used to calculate an accurate location;
+						currently 84% of 111 calls originate from a mobile (16% from landlines) which works out to around 1.3 million
+						genuine calls on mobile networks so it makes sense to look to leverage that for ascertaining location</li>
+						</ul>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h3>Emergency calls are often times of great stress. Additionally:</h3>
+				<ul>
+					<li>People may not know where they are (there have been instances of hikers lost in remote
+						locations)</li>
+					<li>There are frequent instances of people being unable to speak during a call (such as instances of
+						domestic violence and injury)</li>
+					<li>There are times when people hang up before there’s been a chance to get their location from them
+						(such as depressive or suicidal calls)</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="convex">
+				<h2>What is ECLI?</h2>
+				<ul>
+					<li>Project developed within Ministry of Business, Innovation and Employment as part of the 
+						Government's Communications portfolio</li>
+					<li>Receives and processes mobile location information when an emergency (111) call is made
+						from a mobile device over a cellular network details and makes the likely 
+						location of the caller available to authorised emergency service providers</li>
+					<li>This helps them respond to emergencies as quickly as possible</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Emergency Service Providers</h2>
+				<ul>
+					<li>New Zealand Police</li>
+					<li>Fire and Emergency New Zealand</li>
+					<li>St John and Wellington Free Ambulance</li>
+				</ul>
+			</section>
+			<section data-background-image="images/cover-slide-background.png" style="color:black" data-transition="zoom">
+				<h3><br>ECLI saves lives by<br>
+					decreasing the time taken to verify location and<br> reducing the average incident dispatch time</h3>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>ECLI Background</h2>
+				<ul>
+					<li>An inital build of the service originally deployed in 2017</li>
+					<li>In 2019 ECLI undertook a redesign + rebuild for greater flexibility, to leverage containerisation
+						and incorporate modern DevOps practices along with a suite of automated regression tests</li>
+					<li>This new system successfully went live in October 2021 and the new platform has already realised
+						many of the rebuild goals</li>
+				</ul>
+			</section>
+				<section data-background-image="images/energy-background.jpg">
+					<br><br><br>
+					<h2 style="color:white">Service availability is<br>essential<br>as ECLI is a critical service</h2>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Why Containerisation?</h2>
+				<ul>
+					<li>Containerisation promotes component delineation and supports a scalable microservices architecture</li>
+					<li>Leverage CI/CD integration</li>
+					<li>Safer releases when deploying microservice updates independent of
+					others</li>
+					<li>Running the same service (with bundled runtime) anywhere helps testing and deployment</li>
+					<li>Zero-downtime with rolling deployments with multiple containers per microservice</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Why Kubernetes?</h2>
+				<ul>
+					<li>Also for its flexibility, portability and provision of PaaS for containers</li>
+					<li>Very widely used and great longterm solution - represents the future</li>
+					<li>Network policies and RBAC allow multiple locked down, segregated environments on a single cluster</li>
+					<li>IaC empowers developers through access to networking etc and makes many things possible including ease
+						 of standing up new environments</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>DCSG's Govt.Container</h2>
+				<ul>
+					<li>Managed Datacom OpenShift offering for Government clients with onshore support</li>
+					<li>Multiple data centres for high availability and DR with low latency between Auckland and Hamilton</li>
+					<li>Ease of integration with existing ECLI components already in DCSG</li>
+					<li>OpenShift provides K8s-compatibility and native support for Helm</li>
+					<li>Ease of integration with Microsoft Azure DevOps</li>
+					<uL>
+						<li>ADO build agents deployed on existing DCSG infrastructure within the network</li>
+					</uL>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Constraints:<br>what makes things harder?</h2>
+				<ul>
+					<li>Security means locked-down clusters via multiple layers of access, slightly similar
+						 to an “air gap”</li>
+					<li>Bandwidth constraints</li>
+					<li>Some required network messaging protocols, such as for 3G mobile, aren’t supported with public
+						cloud</li>
+					<li>Managed service means full <b>admin</b> not possible</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Architecture details</h2>
+				<ul>
+					<li>Backbone services, including integration into mobile network operators</li>
+					<ul>
+						<li>Vodafone, 2Degrees and Spark</li>
+					</ul>
+					<li>Supporting DCSG infrastructure for network connections and also VMs to facilitate DevOps</li>
+					<li>Container platform provided by OpenShift</li>
+					<li>Azure for DevOps and some cloud services</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Core ECLI Containerised Services</h2>
+				<ul>
+					<li>Containerised microservices with APIs built in .NET on Linux</li>
+					<li>Containerised high-availability RabbitMQ message bus</li>
+					<li>Containerised high-availability NoSQL MongoDB database for short-lived, schema-less data</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Azure DevOps</h2>
+				<ul>
+					<li>Pipelines for build, release and repeatable tasks<br>(e.g. failover)</li>
+					<li>Azure build agents allow a more secure model of running behind firewalls and reaching out for jobs</li>
+					<li>Integration with Azure services such as Git, KeyVault and Container Registry</li>
+					<li>Wrap scripts running on build agent VMs with ADO pipelines</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
+				<p>
+					<b>High-Level Architecture Overview of ECLI</b><br>
+					<img src="images/ECLI-Architecture-Overview.png">
+				</p>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>MongoDB</h2>
+				<ul>
+					<li>High availability <b>replica sets</b> within an environment:<br>1 primary and multiple secondaries</li>
+					<li>"Stretch cluster" across data centres for increased H.A.</li>
+					<li>Non-voting "standby" MongoDB replica allows a quorum in a data centre (3 out of 5)</li>
+					<li>Reconfiguring the replica set member priorities triggers an election and changes the primary</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="none">
+				<h2>MongoDB Overview</h2>
+				<img src="images/mongodb.png">
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Helm:<br>The package manager for Kubernetes</h2>
+				<ul>
+					<li><b>Helm Charts</b> represent a bundle of OpenShift manifests that have container image references</li>
+					<li>Easy to just deploy microservice updates through changing the referenced image through an ADO variable,
+						updated during the CI/CD process</li>
+					<li>Charts can contain upstream subcharts</li>
+					<li>Deployment mechanism allows allows easy installing, upgrading and deleting</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>More about Helm for us</h2>
+				<ul>
+					<li>OO design - clean naming and clear delineation between microservice bundles</li>
+					<li>ECLI: treat a Helm chart as an “application" bundle</li>
+					<li>This smaller "application" bundle split gives us installation flexibility:</li>
+					<ul>
+						<li>The same OCP project</li>
+						<li>Different projects</li>
+						<li>Multiple times into the same project</li>
+						<li>Different clusters</li>
+					</ul>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Why Helm vs an Operator?</h2>
+				<ul>
+					<li>Reduced complexity</li>
+					<li>Was more common at rebuild outset and ECLI had team familiarity with it</li>
+					<li>Some use-cases better suit Helm; we can install multiple times in a single project and we have
+						leveraged "inheritance" through subcharts</li>
+					<li>Easier for CI/CD</li>
+					<li>Container registries support chart storage</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Environments</h2>
+				<ul>
+					<li>Test and Stable on Azure Red Hat OpenShift (ARO) cluster</li>
+					<li>SIT and PROD on both clusters Govt.Container</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Projects, networking and RBAC</h2>
+				<ul>
+					<li>SIT and PROD separated by access permissions and networking</li>
+					<li>Delineation between roles such as <b>developer</b> vs <b>admin</b> vs <b>support</b> along with <b>service accounts</b> for secure
+				deployment</li>
+					<li><b>Network Policies</b> to enforce separation between projects and services</li>
+					<li><b>IaC</b> gives developers control of this through code (that goes into Git)</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Some challenges</h2>
+				<ul>
+					<li>Deployment of lots of new container images as well as patching of our clusters has meant throttling
+						 of our bandwidth and slow image pull times</li>
+					<li>Lack of insights into failures of individual components (especially when not presenting as complete
+						outage) requiring monitoring</li>
+					<li>Integration into automated alerting ticketing system</li>
+					<li>Inter-data centre connection outage leading to MongoDB disruption</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/energy2-background.jpg" data-transition="concave">
+				<h2 style="color:white">Reliability through Availability</h2>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Multiple Clusters</h2>
+				<ul>
+					<li>Azure ARO dev/test cluster - greater control of this and allows OpenShift upgrade testing</li>
+					<li>For resiliency and high availability we have 2 geographically separated prod OCP clusters</li>
+					<li>Handle backbone service connections (such as MNOs) into data centres being taken down for upgrades</li>
+					<li>Smoke testing NONLIVE deployments prior to LIVE deployment</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Failover</h2>
+				<ul>
+					<li>F5 with global traffic management: DNS strategy with short TTL</li>
+					<li>Manual and automated failover</li>
+					<li>Automated detection of LIVE not being healthy and NONLIVE promoted</li>
+					<li>Triggered failover via ADO pipeline - takes a few seconds to run</li>
+					<li>Environment statuses changed, traffic manager DNS change and MongoDB primary shifted to new LIVE environment in other data centre</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
+				<h2>Failover Overview</h2>
+				<img src="images/Failover.png">
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Container Registry</h2>
+				<ul>
+					<li>Container registry solution within each cluster to facilitate quick image pulls and remove external Azure cloud 
+						dependency</li>
+					<li>Improve container image delivery for constrained bandwidth and reduced risk with dependency on
+						external cloud-hosted registry</li>
+					<li>Custom Helm chart that incorporates a Docker registry as well as image synchronisation script
+						using <b>Skopeo</b> run as a CronJob and images stored on a PVC</li>
+				</ul>
+			</section>
+
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Monitoring and alerting</h2>
+				<ul>
+					<li>Dynatrace - cloud-hosted service and OCP operator</li>
+					<li>Integration with ticket management for 24/7 support and MS Teams notifications</li>
+					<li>Alert profiles based upon certain observed errors etc</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Realised benefits</h2>
+				<ul>
+					<li>Great uptime and most releases are now zero-downtimes</li>
+					<li>Safe deployments that are easy and repeatable aided by automated test suite</li>
+					<li>Automated container image rebuilding for patching</li>
+					<li>Enhanced security through DevSecOps such as container image scanning</li>
+					<li>We now have a scalable platform for adding new applications to, and which helps the ongoing government Certification & Accreditation of the ECLI service</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Currently: Replatforming Data Science application</h2>
+				<ul>
+					<li>We require a lot of analysis over our data to help provide insights, troubleshoot
+						potential issues & provide reports</li>
+					<li>We are replatforming this Data Workshop application onto OpenShift so it
+						can work securely with various data sources and provide a flexible platform 
+						for data scientists/engineers to 
+						work with the tools that they need and want</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png">
+				<h2>Some Extra Data Workshop Details</h2>
+				<ul>
+					<li>Containerised Apache Airflow and Postgres</li>
+					<li>Apache Airflow provides a workflow engine</li>
+					<li>Integration with Microsoft PowerBI, via a PowerBI gateway for report building</li>
+				</ul>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="zoom">
+				<h2>Im summary and to the future...</h2>
+				<p>
+					The service has become a critical component of the emergency response system, significantly 
+					contributing to improving public safety outcomes and saving lives of New Zealanders.
+				</p>
+				<p>
+					With anticipation of a higher number of emergency calls being made over new technologies, including 
+					5G, and Voice over Wi-Fi, ongoing enhancements to the Service will ensure it remains current. 
+				</p>
+			</section>
+			<section data-background-image="images/ecli-header-narrow.png" data-transition="concave">
+				<h2>Questions?</h2>
+			</section>
+			<!-- <section data-background-image="images/ecli-header-narrow.png">
+				<h2>Further details/references:</h2>
+				- [ ]
+			</section> -->
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
 </body>
 
 </html>
